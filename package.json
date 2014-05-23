@@ -1,0 +1,19 @@
+{
+  "name": "ui-fonts",
+  "version": "0.0.0",
+  "description": "@font-face definitions using line base64 to make your life with Polymer easier",
+  "scripts": {
+    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build"
+  },
+  "authors": [
+    "Will Ballard <wballard@mailframe.net>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "~3.6.2",
+    "handlebars": "~2.0.0-alpha.4",
+    "coffee-script": "~1.7.1",
+    "event-stream": "~3.1.5",
+    "gulp-rename": "~1.2.0"
+  }
+}
