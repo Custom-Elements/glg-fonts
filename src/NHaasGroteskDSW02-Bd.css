@@ -1,0 +1,7 @@
+
+@font-face {
+  font-family: 'Grotesk';
+  src: url(data:application/x-font-woff;charset=utf-8;base64,{{content}}) format('woff'),
+  font-weight: bold;
+  font-style: normal;
+}
