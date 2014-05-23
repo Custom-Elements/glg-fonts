@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "@font-face definitions using inline base64 to make your life with Polymer easier",
   "scripts": {
-    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build"
+    "postinstall": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build"
   },
   "authors": [
     "Will Ballard <wballard@mailframe.net>"
