@@ -23,5 +23,5 @@ Build font files into css importable snippets, one per font.
                   content: file.contents.toString('base64')
                 })
                 callback undefined, file
-        .pipe rename(extname: '.css')
+        .pipe rename(extname: '.less')
         .pipe gulp.dest('build')
