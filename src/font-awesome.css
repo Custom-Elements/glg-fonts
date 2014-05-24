@@ -6,7 +6,7 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(data:application/x-font-woff;charset=utf-8;base64,{{content}}) format('woff'),
+  src: url(data:application/x-font-woff;charset=utf-8;base64,{{content}}) format('woff');
   font-weight: normal;
   font-style: normal;
 }
