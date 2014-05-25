@@ -6,31 +6,33 @@ Build font files into css importable snippets, one per font.
     fs = require 'fs'
     handlebars = require 'handlebars'
     path = require 'path'
+    util = require 'util'
     handle = (stream)->
       stream.on 'error', ->
         util.log.apply this, arguments
         stream.end()
 
-    gulp.task 'build', ->
+Load up all the fonts to be used as substitution variables.
+
+    fonts = {}
+    gulp.task 'fonts', ->
+      gulp.src '*.woff', {cwd: 'fonts'}
+        .pipe handle do ->
+          es.map (file, callback) ->
+            fs.readFile file.path, (err, data) ->
+              fonts[path.basename(file.path, '.woff')] = file.contents.toString('base64')
+              callback undefined, file
+
+    gulp.task 'build', ['fonts'], ->
       gulp.src '*.less', {cwd: 'src'}
         .pipe handle do ->
           es.map (file, callback) ->
-            name = path.basename(file.path, '.woff')
-            fs.exists path.join(__dirname, 'src', "#{name}.css"), (exists) ->
-              if exists
-                template = path.join(__dirname, 'src', "#{name}.css")
-              else
-                template = path.join(__dirname, '/src/font.css')
-              fs.readFile template, (err, data) ->
-                file.contents = new Buffer(handlebars.compile(data.toString('utf8')) {
-                  name: name
-                  content: file.contents.toString('base64')
-                })
-                callback undefined, file
-        .pipe rename(extname: '.less')
+            template = handlebars.compile(file.contents.toString('utf8'))
+            file.contents = new Buffer(template(fonts))
+            callback undefined, file
         .pipe gulp.dest('build')
 
-    gulp.task 'watch', ->
+    gulp.task 'watch',  ['build'], ->
       watcher = gulp.watch 'src/**/*.*', ['build']
       watcher.on 'change', ->
         console.log 'rebuildling...'

@@ -1,7 +1,0 @@
-
-@font-face {
-  font-family: '{{name}}';
-  src: url(data:application/x-font-woff;charset=utf-8;base64,{{content}}) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
