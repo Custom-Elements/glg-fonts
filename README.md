@@ -9,7 +9,7 @@ This is provided as npm since it has a build step using
 [gulp](http://gulpjs.com/).
 
 ```shell
-npm install --save git+git@github.com:wballard/ui-fonts.git
+npm install --save git@github.com:wballard/ui-fonts.git
 ```
 
 In your less source, you just import and this will inline:
