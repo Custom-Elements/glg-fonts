@@ -31,6 +31,8 @@ Load up all the fonts to be used as substitution variables.
             file.contents = new Buffer(template(fonts))
             callback undefined, file
         .pipe gulp.dest('build')
+        .pipe rename extname: '.css'
+        .pipe gulp.dest('build')
 
     gulp.task 'watch',  ['build'], ->
       watcher = gulp.watch 'src/**/*.*', ['build']

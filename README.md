@@ -12,9 +12,9 @@ This is provided as npm since it has a build step using
 npm install --save wballard/ui-fonts.git
 ```
 
-In your less source, you just import and this will inline:
+In your less/css source, you just import and this will inline:
 
-```less
+```css
 @import "<root>/node_modules/ui-fonts/build/font-awesome";
 @import "<root>/node_modules/ui-fonts/build/grotesk";
 ```
