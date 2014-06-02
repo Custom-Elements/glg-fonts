@@ -1,7 +1,7 @@
 {
-  "name": "ui-fonts",
+  "name": "glg-fonts",
   "version": "0.0.0",
-  "description": "@font-face definitions using inline base64 to make your life with Polymer easier",
+  "description": "@font-face and font-family definitions for GLG apps",
   "scripts": {
     "postinstall": "gulp build",
     "test": "gulp watch"
