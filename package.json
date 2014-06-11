@@ -3,18 +3,16 @@
   "version": "0.0.0",
   "description": "@font-face and font-family definitions for GLG apps",
   "scripts": {
-    "postinstall": "gulp build",
-    "test": "gulp watch"
+    "postinstall": "make"
   },
   "authors": [
     "Will Ballard <wballard@mailframe.net>"
   ],
   "license": "MIT",
   "dependencies": {
-    "gulp": "~3.6.2",
-    "handlebars": "~2.0.0-alpha.4",
+    "handlebars": "~2.0.0",
     "coffee-script": "~1.7.1",
-    "event-stream": "~3.1.5",
-    "gulp-rename": "~1.2.0"
-  }
+    "less": "~1.7.1"
+  },
+  "repository": "git@github.com:Custom-Elements/glg-fonts.git"
 }
