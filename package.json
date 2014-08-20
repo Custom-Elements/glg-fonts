@@ -2,17 +2,11 @@
   "name": "glg-fonts",
   "version": "0.0.0",
   "description": "@font-face and font-family definitions for GLG apps",
-  "scripts": {
-    "postinstall": "make"
-  },
   "authors": [
     "Will Ballard <wballard@mailframe.net>"
   ],
   "license": "MIT",
   "dependencies": {
-    "handlebars": "~2.0.0",
-    "coffee-script": "~1.7.1",
-    "less": "~1.7.1"
   },
   "repository": "git@github.com:Custom-Elements/glg-fonts.git"
 }
